@@ -68,13 +68,10 @@ const Footer = () => {
                 info@researchcompass.uz
               </a>
               <div className="flex gap-4 mt-4">
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  <Facebook size={20} />
-                </a>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <a href="https://www.instagram.com/research_compass.uz/" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   <Instagram size={20} />
                 </a>
-                <a href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                <a href="https://www.linkedin.com/company/research-compass-org" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
                   <Linkedin size={20} />
                 </a>
               </div>

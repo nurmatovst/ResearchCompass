@@ -14,26 +14,6 @@ const About = () => {
   const universitiesSection = useScrollAnimation(0.1);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
-  const team = [
-    {
-      name: "Dr. Sarah Johnson",
-      role: "Founder & Director",
-      bio: "PhD from Harvard, specializing in Educational Innovation",
-      description: "Leading educational innovation with 15+ years of research experience in transformative learning methodologies."
-    },
-    {
-      name: "Prof. Michael Chen",
-      role: "Academic Director",
-      bio: "Professor at Yale, Research Methodology Expert",
-      description: "Renowned researcher with published works in leading academic journals worldwide."
-    },
-    {
-      name: "Dr. Emily Rodriguez",
-      role: "Mentorship Coordinator",
-      bio: "Stanford Graduate, 10+ years mentoring experience",
-      description: "Passionate mentor who has guided over 200 students to academic success."
-    },
-  ];
 
   const values = [
     {
@@ -170,49 +150,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Team Section with Enhanced Hover */}
-        <section 
-          ref={teamSection.elementRef}
-          className={`py-24 md:py-32 relative overflow-hidden transition-all duration-1000 ${
-            teamSection.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/10 to-background"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-                Our Leadership Team
-              </h2>
-              <div className="w-20 h-1 bg-primary mx-auto"></div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {team.map((member, index) => (
-                <div key={index} className="group">
-                  <Card className="h-full border-0 shadow-elegant bg-card/50 backdrop-blur overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105">
-                    <div className="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-                    <CardContent className="p-8 text-center relative z-10">
-                      <div className="relative mb-6">
-                        <div className="w-32 h-32 bg-gradient-hero rounded-full mx-auto flex items-center justify-center shadow-glow transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-12">
-                          <span className="text-4xl font-serif font-bold text-primary-foreground">
-                            {member.name.split(' ').map(n => n[0]).join('')}
-                          </span>
-                        </div>
-                      </div>
-                      <h3 className="font-serif font-bold text-2xl mb-2 transition-colors duration-300 group-hover:text-primary">
-                        {member.name}
-                      </h3>
-                      <p className="text-sm text-secondary font-semibold mb-4">{member.role}</p>
-                      <p className="text-sm text-muted-foreground mb-4">{member.bio}</p>
-                      <p className="text-sm text-muted-foreground/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        {member.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
 
       </main>
 
